@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: WoodFloor051_2K_Color
-    second: {fileID: 2800000, guid: 010c7eee3d4c81b46b0067ab34fd1a79, type: 3}
+    second: {fileID: 2800000, guid: 895e0b969b231e549babb2c629c03275, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: WoodFloor051_2K_Roughness
-    second: {fileID: 2800000, guid: f8c79ec85fddfd84f9c26d2775167bbb, type: 3}
+    second: {fileID: 2800000, guid: 9a793631d6d7f2743983cabdc91e40e3, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

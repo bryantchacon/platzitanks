@@ -11,9 +11,7 @@ public class GameManager : MonoBehaviour
     public CameraControl cameraControl;
     public Text uiMessage;
     public GameObject tankPrefab;
-    //Array de los tanques de las escuelas
     public TankManager[] tanks;
-    //public TankManager[] selectedTanks;
 
 
     private int roundNumber;
@@ -22,12 +20,12 @@ public class GameManager : MonoBehaviour
     private TankManager roundWinner;
     private TankManager gameWinner;
 
-    //Fixes a change to the physics engine
+    //Arregla un cambio en las fisicas del engine
     const float maxDepenetrationVelocity = float.PositiveInfinity;
 
     private void Start()
     {
-        //Applying the fix to the physics engine
+        //Aplica el arreglo en las fisicas del engine
         Physics.defaultMaxDepenetrationVelocity = maxDepenetrationVelocity;
         
         startWait = new WaitForSeconds(startDelay);
@@ -43,19 +41,6 @@ public class GameManager : MonoBehaviour
 
     private void SpawnAllTanks()
     {
-        /*for (int i = 0; i < 2; i++)
-        {
-            selectedTanks[i] = tanks[Random.Range(0, tanks.Length)];
-        }
-
-        for (int i = 0; i < selectedTanks.Length; i++)
-        {
-            selectedTanks[i].instance =
-                Instantiate(tankPrefab, selectedTanks[i].spawnPoint.position, selectedTanks[i].spawnPoint.rotation) as GameObject;
-            selectedTanks[i].playerNumber = i + 1;
-            selectedTanks[i].Setup();
-        }*/
-
         for (int i = 0; i < tanks.Length; i++)
         {
             tanks[i].instance = Instantiate(tankPrefab, tanks[i].spawnPoint.position, tanks[i].spawnPoint.rotation);
@@ -68,12 +53,10 @@ public class GameManager : MonoBehaviour
     private void SetCameraTargets()
     {
         Transform[] targets = new Transform[tanks.Length];
-        //Transform[] targets = new Transform[selectedTanks.Length];
 
         for (int i = 0; i < targets.Length; i++)
         {
             targets[i] = tanks[i].instance.transform;
-            //targets[i] = selectedTanks[i].instance.transform;
         }
 
         cameraControl.targetsToFollow = targets;        
@@ -88,10 +71,12 @@ public class GameManager : MonoBehaviour
 
         if (gameWinner != null)
         {
-            SceneManager.LoadScene(0);
-            
-            //Escena de creditos
+            //La escena del logo y los controles es la 0, la del juego (esta) la 1 y la de los creditos la 2
             //SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
+
+            //Aqui debe cargarse la escena de los creditos
+            //SceneManager.LoadScene(2);
         }
         else
         {
