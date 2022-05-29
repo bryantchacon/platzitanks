@@ -72,10 +72,11 @@ public class GameManager : MonoBehaviour
         if (gameWinner != null)
         {
             //La escena del logo y los controles es la 0, la del juego (esta) la 1 y la de los creditos la 2
-            //SceneManager.LoadScene(1);
+
+            //Tendrias que comentar esta linea para que no recargue la escena del juego si no la siguiente... 
             SceneManager.LoadScene(0);
 
-            //Aqui debe cargarse la escena de los creditos
+            //... o sea esta
             //SceneManager.LoadScene(2);
         }
         else
