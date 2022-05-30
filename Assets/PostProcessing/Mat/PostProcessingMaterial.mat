@@ -70,9 +70,9 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _PixelSize: 1.7766991
+    - _PixelSize: 1.7777778
     - _RatioX: 1
-    - _RatioY: 1.7766991
+    - _RatioY: 1.7777778
     - _Saturate: 1.18
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
