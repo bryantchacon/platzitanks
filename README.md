@@ -8,4 +8,4 @@ Platform: Windows
 
 Players: 2
 
-The game is in 3D, so the pixel art look was implemented with an in-camera shader.
+The game is in 3D, so the slight pixel art look was implemented with an in-camera shader.
